@@ -116,3 +116,25 @@ hints = {0: "as_ _",
          28: "Creo que es la traduccion mas cerca a FLIPARSE. s___ f",
          29: "ahhhh que recuerdos... p_ _",
          30: "Llevarse bien. g _"}
+
+
+for x in range(0, len(shuffled_list)):
+
+    print(sentences[shuffled_list[x]])
+
+    sol = input()
+
+    if sol == "hint":
+        print(hints[shuffled_list[x]])
+        used_hints += 1
+        sol = input()
+
+    if sol == solutions[shuffled_list[x]]:
+        print("correct!")
+        marks += 1
+        total += 1
+
+    else:
+        print("wrong, the correct answer is: ", solutions[shuffled_list[x]])
+        total += 1
+
